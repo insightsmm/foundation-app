@@ -66,7 +66,7 @@ export default function Dashboard({ initialBrands, userId, plan, isAdmin }: { in
         </div>
         <nav className="rail-nav">
           {NAV.map((n) => (
-            <button key={n.id} className={'navitem' + (area === n.id ? ' on' : '')} onClick={() => setArea(n.id)}>{n.label}</button>
+            <button key={n.id} className={'navitem' + (area === n.id ? ' on' : '')} style={area === n.id ? { background: 'var(--mark)', color: '#14110B', fontWeight: 700 } : undefined} onClick={() => setArea(n.id)}>{n.label}</button>
           ))}
           {isAdmin && <Link className="navitem adminlink" href="/app/admin">Super admin</Link>}
         </nav>
