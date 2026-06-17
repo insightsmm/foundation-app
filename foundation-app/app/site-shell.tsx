@@ -1,4 +1,4 @@
-import Link from 'next/link';
+'use client';import Link from 'next/link';import { usePathname } from 'next/navigation';
 
 const NAV: [string, string][] = [
   ['/flywheel', 'Flywheel'],
@@ -11,14 +11,14 @@ const NAV: [string, string][] = [
   ['/contact', 'Contact'],
 ];
 
-export default function SiteShell({ children }: { children: React.ReactNode }) {
+export default function SiteShell({ children }: { children: React.ReactNode }) {const pathname = usePathname();
   return (
     <div className="site">
       <nav className="site-nav">
         <div className="wrap2 row2">
           <Link href="/" className="logo2"><span className="dot" />TemPO HQ</Link>
           <div className="site-links">
-            {NAV.map(([h, l]) => <Link key={h} href={h}>{l}</Link>)}
+            {NAV.map(([h, l]) => <Link key={h} href={h} aria-current={pathname === h ? 'page' : undefined} style={pathname === h ? { color: 'var(--t-acc)', fontWeight: 700 } : undefined}>{l}</Link>)}
           </div>
           <div className="nav-spacer" />
           <Link href="/login" className="btn2 ghost">Sign in</Link>
