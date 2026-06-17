@@ -51,7 +51,7 @@ label.lab{display:block;font-family:'Space Grotesk',sans-serif;font-weight:500;f
 .rail-nav{display:flex;flex-direction:column;gap:4px;margin-top:8px}
 .navitem{text-align:left;background:none;border:0;color:var(--muted);font-family:inherit;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;cursor:pointer}
 .navitem:hover{background:var(--surface);color:var(--paper)}
-.navitem.on{background:rgba(242,188,45,.12);color:var(--markink)}
+.navitem.on{background:var(--mark);color:#14110B;font-weight:700}
 .signout{margin-top:auto;color:var(--muted);font-size:13px}
 .main{padding:32px 36px;max-width:1000px}
 .area-head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px;flex-wrap:wrap}
