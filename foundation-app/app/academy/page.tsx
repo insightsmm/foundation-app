@@ -9,8 +9,8 @@ export default function Page() {
         <h1 style={{ fontSize: 'clamp(32px,5vw,52px)' }}>Learn the method behind the software.</h1>
         <p className="sub">Anyone can generate a script. The Academy teaches the methodology that makes it work: the 3Cs, the TPO Method, the Clarity Mirror, and the systems that turn content into booked clients. Take it on your own, or work with Frantz 1:1.</p>
         <div className="hero-ctas">
-          <a href="mailto:frantz@insightsm.com?subject=TPO%20Course%20enrollment" className="btn2 acc lg">Enroll in the course ($297)</a>
-          <a href="mailto:frantz@insightsm.com?subject=TPO%20Method%201:1%20Coaching" className="btn2 ghost lg">Ask about 1:1 coaching</a>
+          <a href="https://buy.stripe.com/cNi3cv5QM8lA9LL7ND0sU05" className="btn2 acc lg">Enroll in the course ($297)</a>
+          <a href="/contact" className="btn2 ghost lg">Ask about 1:1 coaching</a>
         </div>
       </div></section>
 
@@ -28,7 +28,7 @@ export default function Page() {
               <li><span className="ck2">✓</span> The TPO Method playbook and 90-day system PDFs</li>
               <li><span className="ck2">✓</span> Lifetime access to materials and updates</li>
             </ul>
-            <a href="mailto:frantz@insightsm.com?subject=TPO%20Course%20enrollment" className="btn2 dark">Enroll in the course</a>
+            <a href="https://buy.stripe.com/cNi3cv5QM8lA9LL7ND0sU05" className="btn2 dark">Enroll in the course</a>
           </div>
           <div className="ptier2 featured">
             <div className="badge2">High touch</div>
@@ -41,7 +41,7 @@ export default function Page() {
               <li><span className="ck2">✓</span> Everything in the digital course</li>
               <li><span className="ck2">✓</span> Direct access between sessions</li>
             </ul>
-            <a href="mailto:frantz@insightsm.com?subject=TPO%20Method%201:1%20Coaching" className="btn2 acc">Email Frantz to learn more</a>
+            <a href="/contact" className="btn2 acc">Email Frantz to learn more</a>
           </div>
         </div>
       </div></section>
