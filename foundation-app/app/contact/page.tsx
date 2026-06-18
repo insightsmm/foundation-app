@@ -2,10 +2,12 @@
 import SiteShell from '../site-shell';
 
 export default function Page() {
-  const handleEmailClick = () => {
+  const handleEmailClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     try {
       const mailtoUrl = 'mailto:frantz@insightsm.com?subject=TemPO%20HQ%20inquiry';
-      console.log('Attempting to open:', mailtoUrl);
+      console.log('Opening email client:', mailtoUrl);
       window.location.href = mailtoUrl;
     } catch (error) {
       console.error('Email button error:', error);
@@ -28,7 +30,12 @@ export default function Page() {
             onClick={handleEmailClick} 
             className="btn2 acc"
             type="button"
-            style={{ cursor: 'pointer' }}
+            style={{ 
+              cursor: 'pointer',
+              pointerEvents: 'auto',
+              position: 'relative',
+              zIndex: 10
+            }}
           >
             Send an email
           </button>
