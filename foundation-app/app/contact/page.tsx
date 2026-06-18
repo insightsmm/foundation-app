@@ -3,7 +3,14 @@ import SiteShell from '../site-shell';
 
 export default function Page() {
   const handleEmailClick = () => {
-    window.location.href = 'mailto:frantz@insightsm.com?subject=TemPO%20HQ%20inquiry';
+    try {
+      const mailtoUrl = 'mailto:frantz@insightsm.com?subject=TemPO%20HQ%20inquiry';
+      console.log('Attempting to open:', mailtoUrl);
+      window.location.href = mailtoUrl;
+    } catch (error) {
+      console.error('Email button error:', error);
+      alert('Unable to open email client. Please email frantz@insightsm.com directly.');
+    }
   };
 
   return (
@@ -17,7 +24,14 @@ export default function Page() {
         <div className="contact-card">
           <div className="eyebrow2">Email</div>
           <p style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 22, margin: '6px 0 18px' }}>frantz@insightsm.com</p>
-          <button onClick={handleEmailClick} className="btn2 acc">Send an email</button>
+          <button 
+            onClick={handleEmailClick} 
+            className="btn2 acc"
+            type="button"
+            style={{ cursor: 'pointer' }}
+          >
+            Send an email
+          </button>
           <hr className="divider2" style={{ margin: '24px 0' }} />
           <p style={{ color: 'var(--t-mut)', fontSize: 14, margin: 0 }}>For coaching, put "Coaching" in the subject line and a sentence about your business and what you are trying to grow.</p>
         </div>
