@@ -1,6 +1,11 @@
+'use client';
 import SiteShell from '../site-shell';
-export const metadata = { title: 'Contact — TemPO HQ' };
+
 export default function Page() {
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:frantz@insightsm.com?subject=TemPO%20HQ%20inquiry';
+  };
+
   return (
     <SiteShell>
       <section className="hero2"><div className="wrap2">
@@ -12,7 +17,7 @@ export default function Page() {
         <div className="contact-card">
           <div className="eyebrow2">Email</div>
           <p style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 22, margin: '6px 0 18px' }}>frantz@insightsm.com</p>
-          <a href="mailto:frantz@insightsm.com?subject=TemPO%20HQ%20inquiry" className="btn2 acc">Send an email</a>
+          <button onClick={handleEmailClick} className="btn2 acc">Send an email</button>
           <hr className="divider2" style={{ margin: '24px 0' }} />
           <p style={{ color: 'var(--t-mut)', fontSize: 14, margin: 0 }}>For coaching, put "Coaching" in the subject line and a sentence about your business and what you are trying to grow.</p>
         </div>
