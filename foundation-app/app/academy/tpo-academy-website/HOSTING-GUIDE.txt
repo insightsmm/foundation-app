@@ -1,0 +1,94 @@
+═══════════════════════════════════════════════════════════════
+  HOSTING THE TPO ACADEMY ON insightsm.com (WordPress)
+  Insight Social Media Management
+═══════════════════════════════════════════════════════════════
+
+WHAT YOU HAVE
+  A self-contained static website (HTML, CSS, JS, one logo, one PDF).
+  It does NOT need a plugin, a database, or PHP. It sits alongside
+  your WordPress site in its own folder and runs in the browser.
+
+  Final URL will be:  https://insightsm.com/academy/
+
+───────────────────────────────────────────────────────────────
+  RECOMMENDED METHOD — Upload to a subfolder (no plugin)
+───────────────────────────────────────────────────────────────
+  This keeps the course 100% separate from WordPress so nothing
+  can conflict with your theme or pages.
+
+  1. Log in to your web host (the company that hosts insightsm.com
+     — e.g. Bluehost, SiteGround, Hostinger, GoDaddy). Open the
+     "File Manager" in cPanel, or connect with an FTP app like
+     FileZilla.
+
+  2. Navigate to your site's web root. It is usually named:
+        public_html/         (most hosts)
+     Your existing WordPress files (wp-admin, wp-content, etc.)
+     live here. Do NOT touch those.
+
+  3. Inside public_html/, create a new folder named:
+        academy
+
+  4. Upload EVERYTHING from this package INTO public_html/academy/
+     Keep the folder structure exactly as-is:
+        academy/
+          index.html
+          dashboard.html
+          resources.html
+          assets/        (styles.css, app.js, logo.png)
+          modules/       (module-1.html ... module-6.html)
+          lessons/       (28 lesson pages)
+          tpo-student-workbook.pdf
+
+     TIP: If your File Manager has an "Upload" + "Extract" option,
+     just upload the .zip and extract it inside the academy folder,
+     then move files up if they land in a nested folder.
+
+  5. Visit:  https://insightsm.com/academy/
+     The catalog page loads. Done.
+
+───────────────────────────────────────────────────────────────
+  LINKING IT FROM YOUR WORDPRESS MENU
+───────────────────────────────────────────────────────────────
+  In WordPress admin:
+    Appearance → Menus → add a "Custom Link"
+      URL:  https://insightsm.com/academy/
+      Text: Academy   (or "Course" / "Training")
+    Save. It now appears in your site navigation.
+
+───────────────────────────────────────────────────────────────
+  ALTERNATIVE — Embed inside a WordPress page (if you can't FTP)
+───────────────────────────────────────────────────────────────
+  If you only have WordPress access (no file manager):
+    1. Install the free plugin "WP File Manager" OR upload the
+       folder using a plugin like "File Manager Advanced."
+    2. Upload the academy folder into /wp-content/uploads/.
+    3. Your URL becomes:
+         https://insightsm.com/wp-content/uploads/academy/index.html
+    4. Create a WordPress page and add a Custom HTML block with a
+       button linking to that URL, or redirect a page to it.
+
+  (The subfolder method above is cleaner — use it if you can.)
+
+───────────────────────────────────────────────────────────────
+  IMPORTANT NOTES
+───────────────────────────────────────────────────────────────
+  • Keep the folder structure intact. Pages reference assets via
+    ../assets/ — moving files around individually will break styles.
+
+  • Student progress & quiz grades are saved in each visitor's own
+    browser (localStorage). Perfect for a single student on one
+    device. It is NOT a shared gradebook — every visitor has their
+    own private progress. For real logins, saved accounts across
+    devices, and a teacher gradebook, that's the TempoHQ (Supabase)
+    build.
+
+  • To update content later: edit the HTML file, re-upload just
+    that file. To restyle the whole site: edit assets/styles.css
+    once — every page updates.
+
+  • HTTPS: since insightsm.com already runs WordPress with SSL,
+    your /academy/ folder is automatically served over https.
+
+Questions on any step — send the name of your web host and I can
+give you the exact click path for that host's file manager.
